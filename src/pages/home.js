@@ -5,8 +5,15 @@ import backgroundImg from '../assets/images/background-img.jpg'
 const headerFactory = () => {
   const header = document.createElement('div');
   header.classList.add("header");
-  header.textContent = "Here is the header!";
   
+  const restaurantName = document.createElement('h1');
+  restaurantName.textContent = "Phool'z Coffee"
+  header.appendChild(restaurantName);
+
+  const restaurantSlogan = document.createElement('h3');
+  restaurantSlogan.textContent = "The best in the Bay Area!";
+  header.appendChild(restaurantSlogan);
+
   return header;
 };
 
