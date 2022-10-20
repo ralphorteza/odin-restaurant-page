@@ -29,3 +29,8 @@ h3 {
   height: 100%;
   z-index: -1;
 }
+
+.header{
+  color: red;
+  font-size: large;
+}

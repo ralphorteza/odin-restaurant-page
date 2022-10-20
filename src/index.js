@@ -1,1 +1,4 @@
-console.log('In branch version-1 again!!');
+import './style.css';
+import home from "./pages/home";
+
+home();
