@@ -1,5 +1,5 @@
-import makeHeader from '../functions/header.js'
-import makeBackground from '../functions/background.js'
+import makeHeader from '../functions/header.js';
+import makeBackground from '../functions/background.js';
 
 const createSplash = () => {
   const splash = document.createElement('div');
