@@ -1,6 +1,5 @@
-import backgroundImg from '../assets/images/background-img.jpg'
-
-
+import makeHeader from '../functions/header.js'
+import makeBackground from '../functions/background.js'
 
 const createSplash = () => {
   const splash = document.createElement('div');
@@ -17,24 +16,17 @@ const createSplash = () => {
   return splash;
 };
 
-const backGroundImg = () => {
-  const imgContainer = document.createElement('div');
-  imgContainer.classList.add('image-container');
-  const bgImage = document.createElement('img');
-  bgImage.src = backgroundImg;
-  imgContainer.appendChild(bgImage);
-  
-  return imgContainer;
-};
-
 const home = function() {
   const content = document.getElementById('content');
   
+  const header = makeHeader();
+  content.appendChild(header);
+
   const splash = createSplash();
   content.appendChild(splash);
 
-  const imgContainer = backGroundImg();
-  content.appendChild(imgContainer);
+  const backgroundImg = makeBackground();
+  content.appendChild(backgroundImg);
 }
 
 
