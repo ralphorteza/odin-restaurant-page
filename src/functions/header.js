@@ -1,17 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const makeHeader = () => {
   const header = document.createElement('div');
   header.classList.add("header");
