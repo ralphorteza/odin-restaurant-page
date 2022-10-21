@@ -2,19 +2,19 @@ import backgroundImg from '../assets/images/background-img.jpg'
 
 
 
-const headerFactory = () => {
-  const header = document.createElement('div');
-  header.classList.add("header");
+const createSplash = () => {
+  const splash = document.createElement('div');
+  splash.classList.add("splash");
   
   const restaurantName = document.createElement('h1');
   restaurantName.textContent = "Phool'z Coffee"
-  header.appendChild(restaurantName);
+  splash.appendChild(restaurantName);
 
   const restaurantSlogan = document.createElement('h3');
   restaurantSlogan.textContent = "The best in the Bay Area!";
-  header.appendChild(restaurantSlogan);
+  splash.appendChild(restaurantSlogan);
 
-  return header;
+  return splash;
 };
 
 const backGroundImg = () => {
@@ -30,8 +30,8 @@ const backGroundImg = () => {
 const home = function() {
   const content = document.getElementById('content');
   
-  const header = headerFactory();
-  content.appendChild(header);
+  const splash = createSplash();
+  content.appendChild(splash);
 
   const imgContainer = backGroundImg();
   content.appendChild(imgContainer);
