@@ -1,5 +1,5 @@
 import backGroundImg from "../functions/background";
-import storeHoursImg from "../assets/images/store-hours";
+import storeHoursImg from "../assets/images/store-hours.png";
 import makeHeader from "../functions/header";
 
 const displayHoursImg = () => {
