@@ -4,6 +4,9 @@
 h1{
   font-size: 60px;
 }
+h2 {
+  font-size: 45px;
+}
 h3 {
   font-size: 30px;
 }
@@ -35,9 +38,19 @@ button {
   margin: 30px;
 }
 
-.image-container {
+.bg-container {
   position: absolute;
   width: auto;
   height: 100%;
   z-index: -1;
+}
+
+/* ============ menu page items ============ */
+.menu-items {
+
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
 }
