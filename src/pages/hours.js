@@ -10,7 +10,7 @@ const displayHoursImg = () => {
   hoursContainer.appendChild(hoursImg);
 
   return hoursContainer;
-}
+};
 
 const createHoursPage = () => {
   const content = document.getElementById('content');
