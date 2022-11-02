@@ -5,9 +5,14 @@ import coffeeIcedImg from '../assets/images/iced-coffee.jpg';
 import teaImg from '../assets/images/tea.jpg';
 import teaIcedImg from '../assets/images/iced-tea.jpg';
 
-const loremIpos = () => {
+const loremIpos = (wordCount) => {
   const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-  return str;
+  
+  const trimmedStr = str.substring(0, wordCount);
+  const resultStr = trimmedStr.substring(0,
+    Math.min(trimmedStr.length, trimmedStr.lastIndexOf(" ")));
+
+  return resultStr;
 }
 
 const menuItem = (name, price, img, desc) => {
@@ -46,10 +51,8 @@ const menuItem = (name, price, img, desc) => {
 const menuContainer = () => {
   const container =  document.createElement('div');
   container.classList.add('menu-items');
-
-  const lorem = loremIpos();
     
-  const menuCoffee = menuItem('coffee', '$4', coffeeImg, lorem.substring(0, 125));
+  const menuCoffee = menuItem('coffee', '$4', coffeeImg, loremIpos(125));
   container.appendChild(menuCoffee);
 
   return container;
