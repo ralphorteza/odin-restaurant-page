@@ -40,9 +40,14 @@ button {
 
 .bg-container {
   position: absolute;
-  width: auto;
+  width: fit-content;
   height: 100%;
   z-index: -1;
+}
+
+.bg-container > * {
+  object-fit: cover;
+  object-position: 100% 0;
 }
 
 /* ============ menu page items ============ */

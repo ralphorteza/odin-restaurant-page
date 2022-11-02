@@ -15,22 +15,9 @@ const loremIpos = (wordCount) => {
   return resultStr;
 }
 
-const menuItem = (name, price, img, desc) => {
-  const itemContainer = document.createElement('div');
-  itemContainer.classList.add('menu-item');
-  
-  // image container for menu item
-  const imgContainer = document.createElement('div');
-  imgContainer.classList.add('image-container');
-  const image = document.createElement('img');
-  image.src = img;
-  imgContainer.appendChild(image);
-  itemContainer.appendChild(imgContainer);
-  
-  // item description holder for menu
+const itemDescription = (name, price, desc) => {
   const menuItemDisc = document.createElement('div');
   menuItemDisc.classList.add('item-descriptor');
-  itemContainer.appendChild(menuItemDisc);
 
   const menuItemName = document.createElement('h2');
   menuItemName.textContent = name;
@@ -44,6 +31,25 @@ const menuItem = (name, price, img, desc) => {
   description.setAttribute('class', 'item-description');
   description.textContent = desc;
   menuItemDisc.appendChild(description);
+
+  return menuItemDisc;
+};
+
+const menuItem = (name, price, img, desc) => {
+  const itemContainer = document.createElement('div');
+  itemContainer.classList.add('menu-item');
+  
+  // image container for menu item
+  const imgContainer = document.createElement('div');
+  imgContainer.classList.add('image-container');
+  const image = document.createElement('img');
+  image.src = img;
+  imgContainer.appendChild(image);
+  itemContainer.appendChild(imgContainer);
+
+  // container for menu item description
+  const itemDescContainer = itemDescription(name, price, desc);
+  itemContainer.appendChild(itemDescContainer);
 
   return itemContainer;
 };
