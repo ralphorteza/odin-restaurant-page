@@ -11,10 +11,10 @@ const makeHeader = () => {
   homeBtn.textContent = "Home";
   nav.appendChild(homeBtn);
 
-  const hoursBtn = document.createElement('button');
-  hoursBtn.setAttribute('id', 'hours');
-  hoursBtn.textContent = "Hours";
-  nav.appendChild(hoursBtn);
+  const menuBtn = document.createElement('button');
+  menuBtn.setAttribute('id', 'menu');
+  menuBtn.textContent = "Menu";
+  nav.appendChild(menuBtn);
 
   const contactBtn = document.createElement('button');
   contactBtn.setAttribute('id', 'contact');
