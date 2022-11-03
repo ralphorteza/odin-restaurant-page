@@ -69,6 +69,7 @@ const menuContainer = () => {
 
   const menuTeaIced = menuItem('iced tea', '$3.5', teaIcedImg, loremIpos(200));
   container.appendChild(menuTeaIced);
+  
   return container;
 };
 

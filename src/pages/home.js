@@ -1,5 +1,6 @@
 import makeHeader from '../functions/header.js';
 import makeBackground from '../functions/background.js';
+import storeHoursImg from "../assets/images/store-hours.png";
 
 const createSplash = () => {
   const splash = document.createElement('div');
@@ -16,8 +17,22 @@ const createSplash = () => {
   return splash;
 };
 
-const home = function() {
+const displayHoursImg = () => {
+  const hoursContainer =  document.createElement('div');
+  hoursContainer.classList.add("hours-container");
+  const hoursImg = document.createElement('img');
+  hoursImg.src = storeHoursImg;
+  hoursContainer.appendChild(hoursImg);
+
+  return hoursContainer;
+};
+
+
+const home = () => {
   const content = document.getElementById('content');
+
+  const backgroundImg = makeBackground();
+  content.appendChild(backgroundImg);
   
   const header = makeHeader();
   content.appendChild(header);
@@ -25,9 +40,9 @@ const home = function() {
   const splash = createSplash();
   content.appendChild(splash);
 
-  const backgroundImg = makeBackground();
-  content.appendChild(backgroundImg);
-}
+  const hours = displayHoursImg();
+  content.appendChild(hours);
+};
 
 
 export default home;

@@ -90,3 +90,25 @@ button {
   width: 200px;
   height: auto;
 }
+
+/* ============ home page items ============ */
+.hours-container > img {
+  background-color: rgba(0,0,0,.7);
+  padding: 50px;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  width: 718px;
+  height: 140px;
+  background-color: rgba(0,0,0,.7);
+  padding: 20px 0;
+  margin: 20px 0;
+
+  color: white;
+}
+
+.splash > * {
+  align-self: center;
+}
