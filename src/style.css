@@ -112,3 +112,37 @@ button {
 .splash > * {
   align-self: center;
 }
+
+
+/* ============ contact page items ============ */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 718px;
+  height: 140px;
+  background-color: rgba(0,0,0,.7);
+  padding: 15px 0;
+  margin: 20px 0;
+
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 718px;
+  height: auto;
+  background-color: rgba(0,0,0,.7);
+  padding: 15px 0;
+  color: white;
+}
+
+.contact-info > * {
+  padding-left: 20px;
+}
