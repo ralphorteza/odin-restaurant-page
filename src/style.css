@@ -10,7 +10,7 @@ h2 {
 h3 {
   font-size: 30px;
 }
-#content {
+#main {
   position: relative;
   flex: 1;
   display: flex;

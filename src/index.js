@@ -4,37 +4,43 @@ import menu from './pages/menu';
 import contact from './pages/contact';
 import init from './functions/init';
 import wipe from './functions/wipe';
-
-//home();
-//hours();
-//contact();
-
-init();
-
-const homeButton = document.querySelector('#home');
-const menuButton = document.querySelector('#menu');
-const contactButton = document.querySelector('#contact');
-
-/* homeButton.addEventListener('click', function(){
-  wipe();
-  home();
-});
-
-menuButton.addEventListener('click', function(){
-  wipe();
-  menu();
-});
-
-contactButton.addEventListener('click', function(){
-  wipe();
-  contact();
-});
- */
+import createHeader from './functions/header';
+import createBackGround from './functions/background';
 
 
-/* TODO: figure out how to switch between pages! */
-homeButton.addEventListener('click', home);
+const navigate = () => {
+  const homeButton = document.querySelector('#home');
+  const menuButton = document.querySelector('#menu');
+  const contactButton = document.querySelector('#contact');
+  homeButton.addEventListener('click', () => {
+    wipe();
+    home();
+  });
+  menuButton.addEventListener('click', () => {
+    wipe();
+    menu();
+  });
+  contactButton.addEventListener('click', () => {
+    wipe();
+    contact();
+  });
+};
 
-menuButton.addEventListener('click', menu);
+const page = () => {
+  const content = document.querySelector('#content');
+  const main = document.createElement('div');
 
-contactButton.addEventListener('click', contact);
+  const background = createBackGround();
+  content.appendChild(background);
+
+  const header = createHeader();
+  content.appendChild(header)
+
+  main.setAttribute('id', 'main');
+  content.appendChild(main);
+  
+  const nav = navigate();
+  init();
+}
+
+page();

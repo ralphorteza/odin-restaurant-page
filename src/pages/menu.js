@@ -1,10 +1,7 @@
-import makeHeader from '../functions/header.js';
-import makeBackground from '../functions/background.js';
 import coffeeImg from '../assets/images/coffee.jpg';
 import coffeeIcedImg from '../assets/images/iced-coffee.jpg';
 import teaImg from '../assets/images/tea.jpg';
 import teaIcedImg from '../assets/images/iced-tea.jpg';
-import wipe from '../functions/wipe';
 
 const loremIpos = (wordCount) => {
   const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -75,17 +72,10 @@ const menuContainer = () => {
 };
 
 const menu = () => {
-  wipe();
-  const content = document.getElementById('content');
-
-  const header = makeHeader();
-  content.appendChild(header);
-
-  const background = makeBackground();
-  content.appendChild(background);
+  const main = document.getElementById('main');
 
   const menuItems = menuContainer();
-  content.appendChild(menuItems);
+  main.appendChild(menuItems);
 };
 
 export default menu;

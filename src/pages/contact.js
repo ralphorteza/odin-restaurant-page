@@ -1,6 +1,3 @@
-import makeHeader from '../functions/header.js';
-import makeBackground from '../functions/background.js';
-
 const createBanner = () => {
   const banner = document.createElement('div');
   banner.classList.add("banner");
@@ -46,21 +43,15 @@ const createContact = () => {
 };
 
 const contact = () => {
-  const content = document.getElementById('content');
-  
-  const background = makeBackground();
-  content.appendChild(background);
-  
-  const header = makeHeader();
-  content.appendChild(header);
+  const main = document.getElementById('main');
 
   const banner = createBanner();
-  content.appendChild(banner);
+  main.appendChild(banner);
 
   const contactInfo = createContact();
-  content.appendChild(contactInfo);
+  main.appendChild(contactInfo);
   
-  return content;
+  return main;
 };
 
 export default contact;
