@@ -71,9 +71,21 @@ const menuContainer = () => {
   return container;
 };
 
+const createBanner = () => {
+  const banner = document.createElement('div');
+  banner.classList.add("menu-banner");
+  
+  const contactUs = document.createElement('h2');
+  contactUs.textContent = "Menu"
+  banner.appendChild(contactUs);
+
+  return banner;
+};
+
 const menu = () => {
   const main = document.getElementById('main');
-
+  const banner = createBanner();
+  main.appendChild(banner);
   const menuItems = menuContainer();
   main.appendChild(menuItems);
 };
